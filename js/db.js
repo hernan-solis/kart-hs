@@ -28,7 +28,7 @@ const DB = {
         }
 
         console.log("💾 Kart-HS operando en modo LocalStorage (Local / Offline)");
-        const currentVersion = 'v2_official_nicknames';
+        const currentVersion = 'v3_clean_drivers_no_karts';
         if (localStorage.getItem('kart_hs_db_version') !== currentVersion) {
             this.seedIfEmpty(true);
             localStorage.setItem('kart_hs_db_version', currentVersion);
@@ -49,8 +49,8 @@ const DB = {
             localStorage.setItem(this.keys.settings, JSON.stringify({
                 points_system: { 1: 8, 2: 7, 3: 6, 4: 5, 5: 4, 6: 3, 7: 2, 8: 1, 9: 0, 10: 0, fastest_lap: 1 }
             }));
-            localStorage.setItem('kart_hs_db_version', 'v2_official_nicknames');
-            console.log("🏁 Base de datos local actualizada con los pilotos oficiales de Copa Pistón 2025");
+            localStorage.setItem('kart_hs_db_version', 'v3_clean_drivers_no_karts');
+            console.log("🏁 Base de datos local actualizada: pilotos oficiales limpios sin número de kart");
         }
     },
 

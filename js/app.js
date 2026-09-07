@@ -339,11 +339,6 @@ const App = {
                     <td style="width: 50px;">
                         <span class="pos-number ${posClass}">${iconBadge}</span>
                     </td>
-                    <td style="width: 60px;">
-                        <span style="font-family: var(--font-mono); font-weight: 900; font-size: 18px; color: ${team ? team.color_primary : '#ffffff'};">
-                            #${driver.number || '-'}
-                        </span>
-                    </td>
                     <td>
                         <div>
                             <div class="driver-nickname">${driver.nickname}</div>
@@ -451,9 +446,6 @@ const App = {
                         <td style="width: 50px;">
                             <span class="pos-number ${posClass}">${pos}</span>
                         </td>
-                        <td style="width: 60px; font-family: var(--font-mono); font-weight: 800;">
-                            #${row.kart_number || '-'}
-                        </td>
                         <td>
                             <div style="font-weight: 800; font-family: var(--font-display); font-size: 15px;">
                                 ${driver ? driver.nickname : (row.driver_name || 'Piloto Desconocido')}
@@ -552,16 +544,13 @@ const App = {
         tbody.innerHTML = rows.map((r, index) => {
             const driverOptions = this.drivers.map(d => `
                 <option value="${d.id}" ${d.id === r.driver_id ? 'selected' : ''}>
-                    ${d.nickname} (${d.first_name}) - #${d.number}
+                    ${d.nickname} (${d.first_name})
                 </option>
             `).join('');
 
             return `
                 <tr data-index="${index}">
                     <td style="width: 45px; font-weight: 800;">${r.position}</td>
-                    <td style="width: 70px;">
-                        <input type="number" class="form-input form-input-sm" style="padding: 4px 8px; width: 60px;" value="${r.kart_number}" data-field="kart_number">
-                    </td>
                     <td>
                         <select class="form-select form-select-sm" data-field="driver_id" style="padding: 4px 8px;">
                             <option value="">-- Seleccionar Piloto --</option>
@@ -761,7 +750,6 @@ const App = {
                     <table class="f1-table">
                         <thead>
                             <tr>
-                                <th>#</th>
                                 <th>Apodo</th>
                                 <th>Nombre Completo</th>
                                 <th>Escudería</th>
@@ -774,7 +762,6 @@ const App = {
                                 const team = this.teams.find(t => t.id === d.team_id);
                                 return `
                                     <tr>
-                                        <td style="font-family: var(--font-mono); font-weight: 800;">#${d.number || '-'}</td>
                                         <td style="font-family: var(--font-display); font-weight: 900; font-size: 16px; color: #ffffff;">${d.nickname}</td>
                                         <td>${d.first_name} ${d.last_name || ''}</td>
                                         <td>
@@ -835,7 +822,6 @@ const App = {
         document.getElementById('driverNickInput').value = '';
         document.getElementById('driverFirstInput').value = '';
         document.getElementById('driverLastInput').value = '';
-        document.getElementById('driverNumberInput').value = '';
         document.getElementById('driverPointsInput').value = '0';
 
         this.populateTeamSelect('driverTeamSelect', '');
@@ -851,7 +837,6 @@ const App = {
         document.getElementById('driverNickInput').value = driver.nickname || '';
         document.getElementById('driverFirstInput').value = driver.first_name || '';
         document.getElementById('driverLastInput').value = driver.last_name || '';
-        document.getElementById('driverNumberInput').value = driver.number || '';
         document.getElementById('driverPointsInput').value = driver.points || 0;
 
         this.populateTeamSelect('driverTeamSelect', driver.team_id);
@@ -874,7 +859,6 @@ const App = {
         const firstName = document.getElementById('driverFirstInput').value.trim();
         const lastName = document.getElementById('driverLastInput').value.trim();
         const teamId = document.getElementById('driverTeamSelect').value;
-        const number = parseInt(document.getElementById('driverNumberInput').value) || 0;
         const points = parseInt(document.getElementById('driverPointsInput').value) || 0;
 
         if (!nickname || !firstName) {
@@ -888,7 +872,6 @@ const App = {
             first_name: firstName,
             last_name: lastName,
             nickname: nickname.toUpperCase(),
-            number,
             points
         };
 
