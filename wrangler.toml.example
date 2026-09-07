@@ -1,0 +1,13 @@
+# ==============================================================================
+# KartHAS - Configuración de Cloudflare Pages & D1 Database
+# ==============================================================================
+
+name = "karthas"
+compatibility_date = "2024-01-01"
+pages_build_output_dir = "."
+
+# Vinculación de la base de datos D1 SQLite
+[[d1_databases]]
+binding = "DB"
+database_name = "karthas-db"
+database_id = "TU_DATABASE_ID_DE_CLOUDFLARE_D1_AQUI"

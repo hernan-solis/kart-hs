@@ -1,0 +1,760 @@
+/* ==============================================================================
+   KartHAS - Estilos Principales & Componentes Responsive
+   ============================================================================== */
+
+/* Layout Base */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+  padding-bottom: 90px; /* Espacio para barra móvil inferior */
+}
+
+@media (min-width: 768px) {
+  .app-container {
+    padding: 24px;
+    padding-bottom: 40px;
+  }
+}
+
+/* Header Superior */
+.main-header {
+  background: linear-gradient(135deg, #161b26 0%, #0d1017 100%);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-card);
+  position: relative;
+  overflow: hidden;
+}
+
+.main-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #e10600 0%, #ff8000 30%, #1e41ff 60%, #0090ff 85%, #ffd700 100%);
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.brand-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-logo {
+  width: 48px;
+  height: 48px;
+  background: #e10600;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  box-shadow: var(--glow-red);
+  transform: skew(-6deg);
+}
+
+.brand-title {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.brand-title .accent {
+  color: var(--f1-red);
+}
+
+.brand-subtitle {
+  font-size: 12px;
+  color: var(--text-secondary);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tournament-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(225, 6, 0, 0.15);
+  border: 1px solid rgba(225, 6, 0, 0.4);
+  color: #ff8c88;
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+}
+
+.tournament-badge .live-dot {
+  width: 8px;
+  height: 8px;
+  background: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #10b981;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.2); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* Navegación Desktop */
+.desktop-nav {
+  display: none;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 6px;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  .desktop-nav {
+    display: flex;
+    gap: 6px;
+  }
+}
+
+.nav-tab-btn {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.nav-tab-btn:hover {
+  color: #ffffff;
+  background: var(--bg-surface);
+}
+
+.nav-tab-btn.active {
+  color: #ffffff;
+  background: var(--f1-red);
+  box-shadow: var(--glow-red);
+}
+
+/* Barra Móvil Inferior */
+.mobile-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(15, 18, 26, 0.96);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 4px;
+  z-index: 100;
+}
+
+@media (min-width: 768px) {
+  .mobile-bottom-nav {
+    display: none;
+  }
+}
+
+.mobile-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: var(--font-display);
+  gap: 3px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  flex: 1;
+}
+
+.mobile-nav-item .icon {
+  font-size: 18px;
+}
+
+.mobile-nav-item.active {
+  color: var(--f1-red);
+}
+
+.mobile-nav-item.active .icon {
+  transform: translateY(-2px);
+  transition: transform 0.2s;
+}
+
+/* Tarjetas y Contenedores */
+.racing-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-card);
+  position: relative;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+  gap: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-bottom: 12px;
+}
+
+.card-title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-subtitle {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* Banner de Podio de Equipos (Top 3) */
+.podium-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  .podium-grid {
+    grid-template-columns: 1fr 1.15fr 1fr;
+    align-items: end;
+  }
+  .podium-1 {
+    order: 2;
+  }
+  .podium-2 {
+    order: 1;
+  }
+  .podium-3 {
+    order: 3;
+  }
+}
+
+.podium-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: transform 0.2s ease;
+}
+
+.podium-card:hover {
+  transform: translateY(-4px);
+}
+
+.podium-1 {
+  border-color: var(--podium-gold);
+  background: linear-gradient(180deg, rgba(255, 215, 0, 0.12) 0%, #161a26 100%);
+  box-shadow: var(--glow-gold);
+}
+
+.podium-2 {
+  border-color: var(--podium-silver);
+  background: linear-gradient(180deg, rgba(226, 232, 240, 0.08) 0%, #161a26 100%);
+}
+
+.podium-3 {
+  border-color: var(--podium-bronze);
+  background: linear-gradient(180deg, rgba(205, 127, 50, 0.08) 0%, #161a26 100%);
+}
+
+.podium-badge {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.podium-team-logo {
+  width: 56px;
+  height: 44px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.podium-team-name {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.podium-drivers {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+.podium-points {
+  font-family: var(--font-mono);
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--podium-gold);
+  margin-top: 10px;
+}
+
+.podium-points-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+}
+
+/* Tabla de Equipos y Pilotos */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+}
+
+.f1-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 14px;
+}
+
+.f1-table th {
+  background: var(--bg-surface);
+  color: var(--text-secondary);
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 12px 14px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.f1-table td {
+  padding: 14px;
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: middle;
+}
+
+.f1-table tr:hover td {
+  background: var(--bg-card-hover);
+}
+
+/* Filas con acento de color de escudería */
+.team-row {
+  position: relative;
+}
+
+.team-badge-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.team-logo-small {
+  width: 36px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.team-color-indicator {
+  width: 5px;
+  height: 36px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.team-name-bold {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.drivers-pair-text {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.drivers-pair-text .driver-1 {
+  color: #ffffff;
+}
+
+.drivers-pair-text .driver-2 {
+  color: var(--text-secondary);
+}
+
+/* Puntos con estilo F1 */
+.points-pill {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 800;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.points-pill .pts-unit {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* Posición y Títulos */
+.pos-number {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 900;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+}
+
+.pos-1 {
+  color: var(--podium-gold);
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.pos-2 {
+  color: var(--podium-silver);
+}
+
+.pos-3 {
+  color: var(--podium-bronze);
+}
+
+/* Vuelta Rápida Badge Oficial */
+.fastest-lap-badge {
+  background: var(--fastest-lap-purple);
+  color: #ffffff;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: var(--glow-purple);
+  white-space: nowrap;
+}
+
+/* Pilotos: Apodo destacado */
+.driver-nickname {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.driver-fullname {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Botones & Controles */
+.btn-f1 {
+  background: var(--f1-red);
+  color: #ffffff;
+  border: none;
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 18px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-f1:hover {
+  background: var(--f1-red-hover);
+  box-shadow: var(--glow-red);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--text-secondary);
+}
+
+/* OCR & Subida de Planilla */
+.scanner-dropzone {
+  border: 2px dashed var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 30px 20px;
+  text-align: center;
+  background: rgba(16, 19, 28, 0.5);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.scanner-dropzone:hover {
+  border-color: var(--f1-red);
+  background: rgba(225, 6, 0, 0.04);
+}
+
+.scanner-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.scanner-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+/* Barra de Progreso Telemetría */
+.telemetry-progress-wrapper {
+  margin: 20px 0;
+  background: var(--bg-surface);
+  border-radius: var(--radius-full);
+  padding: 4px;
+  border: 1px solid var(--border-color);
+  display: none;
+}
+
+.telemetry-progress-bar {
+  height: 12px;
+  background: linear-gradient(90deg, #e10600, #ff8000, #ffd700);
+  border-radius: var(--radius-full);
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.telemetry-status-text {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-top: 6px;
+}
+
+/* Ocultar elementos admin cuando no está logueado */
+.hidden-admin {
+  display: none !important;
+}
+
+/* Formularios & Modales */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  max-width: 550px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-label {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.form-input, .form-select {
+  width: 100%;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-input:focus, .form-select:focus {
+  border-color: var(--f1-red);
+}
+
+/* Toasts */
+.toast-container {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (min-width: 768px) {
+  .toast-container {
+    bottom: 24px;
+  }
+}
+
+.toast {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  color: #ffffff;
+  padding: 12px 18px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: slideUp 0.3s ease;
+}
+
+.toast.success {
+  border-left: 4px solid #10b981;
+}
+
+.toast.error {
+  border-left: 4px solid var(--f1-red);
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer con lema de F1 */
+.racing-footer {
+  text-align: center;
+  padding: 24px 0 12px;
+  color: var(--text-muted);
+  font-size: 12px;
+  border-top: 1px solid var(--border-color);
+  margin-top: 40px;
+}
+
+.racing-quote {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--f1-red);
+  margin-bottom: 6px;
+}

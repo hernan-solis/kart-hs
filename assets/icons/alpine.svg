@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100" fill="none">
+  <rect width="120" height="100" rx="16" fill="#0D111A" stroke="#0090FF" stroke-width="3"/>
+  <!-- Alpine Stylized A -->
+  <path d="M48 24 L24 74 H40 L46 62 H74 L80 74 H96 L72 24 H48 Z M51 52 L60 35 L69 52 H51 Z" fill="#0090FF"/>
+  <!-- Pink Arrow Stroke -->
+  <path d="M36 68 L60 48 L84 68" stroke="#FD4BC7" stroke-width="4" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100" fill="none">
+  <rect width="120" height="100" rx="16" fill="#121212" stroke="#FF8000" stroke-width="3"/>
+  <!-- Papaya Swoosh -->
+  <path d="M22 62 C45 35 78 30 100 48 C92 46 80 47 70 54 C54 65 38 68 22 62 Z" fill="#FF8000"/>
+  <!-- Text hint -->
+  <text x="60" y="82" fill="#FFFFFF" font-family="'Titillium Web', sans-serif" font-weight="900" font-size="14" text-anchor="middle" letter-spacing="1">McLAREN</text>
+</svg>

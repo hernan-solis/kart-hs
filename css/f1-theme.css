@@ -1,0 +1,104 @@
+/* ==============================================================================
+   KartHAS - Tema Motorsport / F1 & Variables
+   ============================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,600;0,700;1,700&family=JetBrains+Mono:wght@500;700&family=Titillium+Web:wght@400;600;700;900&display=swap');
+
+:root {
+  /* Paleta Base Oscura */
+  --bg-main: #0b0d13;
+  --bg-card: #131722;
+  --bg-card-hover: #1a2030;
+  --bg-surface: #1e2436;
+  --bg-input: #10131c;
+  --border-color: #262d42;
+  --border-focus: #e10600;
+
+  /* Texto */
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+
+  /* Colores F1 & Acentos */
+  --f1-red: #e10600;
+  --f1-red-hover: #ff1801;
+  --f1-carbon: #181c26;
+  --podium-gold: #ffd700;
+  --podium-silver: #e2e8f0;
+  --podium-bronze: #cd7f32;
+  --fastest-lap-purple: #b15eff;
+  --fastest-lap-glow: rgba(177, 94, 255, 0.35);
+
+  /* Escuderías */
+  --team-haas: #e6002b;
+  --team-redbull: #1e41ff;
+  --team-mclaren: #ff8000;
+  --team-alpine: #0090ff;
+  --team-audi: #e21a22;
+
+  /* Tipografías */
+  --font-display: 'Chakra Petch', 'Titillium Web', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Titillium Web', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Sombras y Luces */
+  --glow-red: 0 0 20px rgba(225, 6, 0, 0.4);
+  --glow-gold: 0 0 15px rgba(255, 215, 0, 0.3);
+  --glow-purple: 0 0 18px rgba(177, 94, 255, 0.45);
+  --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.5);
+
+  /* Curvaturas */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  line-height: 1.5;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(225, 6, 0, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(30, 65, 255, 0.06) 0%, transparent 45%),
+    linear-gradient(rgba(11, 13, 19, 0.95), rgba(11, 13, 19, 0.98)),
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.015) 0, rgba(255, 255, 255, 0.015) 2px, transparent 0, transparent 8px);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Patrón de fibra de carbono para barras o encabezados */
+.carbon-pattern {
+  background: 
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+  background-size: 20px 20px;
+}
+
+/* Scrollbar estilizada */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--f1-red);
+}
