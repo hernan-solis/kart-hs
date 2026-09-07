@@ -202,22 +202,22 @@ const OCRScanner = {
 
         // Mapeos conocidos de la hoja de Zárate a la Copa Pistón:
         const knownAliases = {
-            'BRAIAN': 'drv_demon',
+            'ADRIAN': 'drv_demon',
             'DEMON': 'drv_demon',
+            'LUCIANO': 'drv_pucho',
             'PUCHO': 'drv_pucho',
-            'LUCAS': 'drv_pucho',
+            'BRAIAN': 'drv_meca',
             'MECA': 'drv_meca',
-            'DARIO': 'drv_meca',
+            'DARIO': 'drv_joel',
             'JOEL': 'drv_joel',
-            'MAURO': 'drv_joel',
-            'NAHUE': 'drv_nahue',
             'NAHUEL': 'drv_nahue',
+            'NAHUE': 'drv_nahue',
+            'LUCAS': 'drv_luquitas',
             'LUQUITAS': 'drv_luquitas',
-            'LUCIANO': 'drv_luquitas',
+            'MAURO': 'drv_salta',
             'SALTA': 'drv_salta',
-            'ADRIAN': 'drv_salta',
-            'RAMA': 'drv_rama',
             'RAMIRO': 'drv_rama',
+            'RAMA': 'drv_rama',
             'FEDE': 'drv_fede',
             'FEDERICO': 'drv_fede',
             'EZE': 'drv_eze',
@@ -248,16 +248,16 @@ const OCRScanner = {
     // Datos oficiales exactos de la hoja de Zárate (Carrera 9) cargada por el usuario
     getStandardZarateRace9Data(drivers) {
         const zarateData = [
-            { pos: 1, kart: 17, name: 'BRAIAN', alias: 'drv_demon', laps: 15, gap: '-', total: '8:34.594', best: '35.712', fl: 1 },
+            { pos: 1, kart: 17, name: 'BRAIAN', alias: 'drv_meca', laps: 15, gap: '-', total: '8:34.594', best: '35.712', fl: 1 },
             { pos: 2, kart: 7, name: 'NAHUEL', alias: 'drv_nahue', laps: 15, gap: '+8.883', total: '8:43.477', best: '36.416', fl: 0 },
             { pos: 3, kart: 50, name: 'RAMIRO', alias: 'drv_rama', laps: 15, gap: '+24.243', total: '8:58.837', best: '37.375', fl: 0 },
-            { pos: 4, kart: 9, name: 'MAURO', alias: 'drv_joel', laps: 15, gap: '+24.751', total: '8:59.345', best: '37.300', fl: 0 },
-            { pos: 5, kart: 46, name: 'LUCIANO', alias: 'drv_luquitas', laps: 14, gap: '1 Vuelta', total: '8:47.271', best: '38.559', fl: 0 },
-            { pos: 6, kart: 5, name: 'ADRIAN', alias: 'drv_salta', laps: 14, gap: '1 Vuelta', total: '8:47.592', best: '39.064', fl: 0 },
+            { pos: 4, kart: 9, name: 'MAURO', alias: 'drv_salta', laps: 15, gap: '+24.751', total: '8:59.345', best: '37.300', fl: 0 },
+            { pos: 5, kart: 46, name: 'LUCIANO', alias: 'drv_pucho', laps: 14, gap: '1 Vuelta', total: '8:47.271', best: '38.559', fl: 0 },
+            { pos: 6, kart: 5, name: 'ADRIAN', alias: 'drv_demon', laps: 14, gap: '1 Vuelta', total: '8:47.592', best: '39.064', fl: 0 },
             { pos: 7, kart: 49, name: 'EMANUEL', alias: 'drv_eze', laps: 14, gap: '1 Vuelta', total: '8:49.110', best: '39.071', fl: 0 },
-            { pos: 8, kart: 19, name: 'DARIO', alias: 'drv_meca', laps: 14, gap: '1 Vuelta', total: '8:58.361', best: '39.214', fl: 0 },
+            { pos: 8, kart: 19, name: 'DARIO', alias: 'drv_joel', laps: 14, gap: '1 Vuelta', total: '8:58.361', best: '39.214', fl: 0 },
             { pos: 9, kart: 15, name: 'FEDE', alias: 'drv_fede', laps: 14, gap: '1 Vuelta', total: '8:59.032', best: '38.820', fl: 0 },
-            { pos: 10, kart: 6, name: 'LUCAS', alias: 'drv_pucho', laps: 14, gap: '1 Vuelta', total: '9:05.944', best: '38.752', fl: 0 }
+            { pos: 10, kart: 6, name: 'LUCAS', alias: 'drv_luquitas', laps: 14, gap: '1 Vuelta', total: '9:05.944', best: '38.752', fl: 0 }
         ];
 
         return zarateData.map(z => {

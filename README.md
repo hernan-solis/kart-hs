@@ -8,10 +8,10 @@ Aplicación web integral, rápida y responsive (diseñada especialmente para cel
 
 | Pos | Escudería | Pilotos (Parejas) | Colores Oficiales | Puntos a Fecha 8 |
 | :---: | :--- | :--- | :--- | :---: |
-| **1º** 🏆 | **HAAS** | **DEMON** (Braian) + **PUCHO** (Lucas) | Rojo Racing / Blanco / Negro | **79 pts** |
-| **2º** 🥈 | **Red Bull Racing** | **MECA** (Darío) + **JOEL** (Mauro) | Azul Marino / Rojo / Amarillo | **66 pts** |
-| **3º** 🥉 | **McLaren** | **NAHUE** (Nahuel) + **LUQUITAS** (Luciano) | Naranja Papaya / Negro | **57 pts** |
-| **4º** | **Alpine** | **SALTA** (Adrián) + **RAMA** (Ramiro) | Azul Eléctrico / Rosa BWT | **53 pts** |
+| **1º** 🏆 | **HAAS** | **DEMON** (Adrián) + **PUCHO** (Luciano) | Rojo Racing / Blanco / Negro | **79 pts** |
+| **2º** 🥈 | **Red Bull Racing** | **MECA** (Braian) + **JOEL** (Darío) | Azul Marino / Rojo / Amarillo | **66 pts** |
+| **3º** 🥉 | **McLaren** | **NAHUE** (Nahuel) + **LUQUITAS** (Lucas) | Naranja Papaya / Negro | **57 pts** |
+| **4º** | **Alpine** | **SALTA** (Mauro) + **RAMA** (Ramiro) | Azul Eléctrico / Rosa BWT | **53 pts** |
 | **5º** | **Audi Sport** | **FEDE** (Federico) + **EZE** (Emanuel) | Plata / Rojo Sport / Negro | **39 pts** |
 
 ---

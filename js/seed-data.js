@@ -1,5 +1,5 @@
 // ==============================================================================
-// KartHAS - Datos Semilla Oficiales (Copa Pistón 2025 - Fecha 8 & 9)
+// Kart-HS - Datos Semilla Oficiales (Copa Pistón 2025 - Fecha 8 & 9)
 // ==============================================================================
 
 const SEED_DATA = {
@@ -70,14 +70,14 @@ const SEED_DATA = {
         }
     ],
     drivers: [
-        // HAAS (79 pts)
+        // HAAS (79 pts) -> DEMON (Adrián) + PUCHO (Luciano)
         {
             id: 'drv_demon',
             team_id: 'team_haas',
-            first_name: 'Braian',
-            last_name: 'Solis',
+            first_name: 'Adrián',
+            last_name: '',
             nickname: 'DEMON',
-            number: 17,
+            number: 5,
             avatar_color: '#E6002B',
             points: 44,
             wins: 4,
@@ -87,10 +87,10 @@ const SEED_DATA = {
         {
             id: 'drv_pucho',
             team_id: 'team_haas',
-            first_name: 'Lucas',
-            last_name: 'Pérez',
+            first_name: 'Luciano',
+            last_name: '',
             nickname: 'PUCHO',
-            number: 6,
+            number: 46,
             avatar_color: '#FFFFFF',
             points: 35,
             wins: 2,
@@ -98,14 +98,14 @@ const SEED_DATA = {
             fastest_laps: 1
         },
 
-        // Red Bull Racing (66 pts)
+        // Red Bull Racing (66 pts) -> MECA (Braian) + JOEL (Darío)
         {
             id: 'drv_meca',
             team_id: 'team_redbull',
-            first_name: 'Darío',
-            last_name: 'Mecánico',
+            first_name: 'Braian',
+            last_name: '',
             nickname: 'MECA',
-            number: 19,
+            number: 17,
             avatar_color: '#1E41FF',
             points: 36,
             wins: 2,
@@ -115,10 +115,10 @@ const SEED_DATA = {
         {
             id: 'drv_joel',
             team_id: 'team_redbull',
-            first_name: 'Mauro',
-            last_name: 'Joel',
+            first_name: 'Darío',
+            last_name: '',
             nickname: 'JOEL',
-            number: 9,
+            number: 19,
             avatar_color: '#FFC900',
             points: 30,
             wins: 1,
@@ -126,12 +126,12 @@ const SEED_DATA = {
             fastest_laps: 1
         },
 
-        // McLaren (57 pts)
+        // McLaren (57 pts) -> NAHUE (Nahuel) + LUQUITAS (Lucas)
         {
             id: 'drv_nahue',
             team_id: 'team_mclaren',
             first_name: 'Nahuel',
-            last_name: 'Gómez',
+            last_name: '',
             nickname: 'NAHUE',
             number: 7,
             avatar_color: '#FF8000',
@@ -143,10 +143,10 @@ const SEED_DATA = {
         {
             id: 'drv_luquitas',
             team_id: 'team_mclaren',
-            first_name: 'Luciano',
-            last_name: 'Lucas',
+            first_name: 'Lucas',
+            last_name: '',
             nickname: 'LUQUITAS',
-            number: 46,
+            number: 6,
             avatar_color: '#47C7FC',
             points: 26,
             wins: 0,
@@ -154,14 +154,14 @@ const SEED_DATA = {
             fastest_laps: 0
         },
 
-        // Alpine (53 pts)
+        // Alpine (53 pts) -> SALTA (Mauro) + RAMA (Ramiro)
         {
             id: 'drv_salta',
             team_id: 'team_alpine',
-            first_name: 'Adrián',
-            last_name: 'Salta',
+            first_name: 'Mauro',
+            last_name: '',
             nickname: 'SALTA',
-            number: 5,
+            number: 9,
             avatar_color: '#0090FF',
             points: 28,
             wins: 1,
@@ -172,7 +172,7 @@ const SEED_DATA = {
             id: 'drv_rama',
             team_id: 'team_alpine',
             first_name: 'Ramiro',
-            last_name: 'Rama',
+            last_name: '',
             nickname: 'RAMA',
             number: 50,
             avatar_color: '#FD4BC7',
@@ -182,12 +182,12 @@ const SEED_DATA = {
             fastest_laps: 0
         },
 
-        // Audi Sport (39 pts)
+        // Audi Sport (39 pts) -> FEDE (Federico) + EZE (Emanuel)
         {
             id: 'drv_fede',
             team_id: 'team_audi',
             first_name: 'Federico',
-            last_name: 'Fede',
+            last_name: '',
             nickname: 'FEDE',
             number: 15,
             avatar_color: '#E21A22',
@@ -200,7 +200,7 @@ const SEED_DATA = {
             id: 'drv_eze',
             team_id: 'team_audi',
             first_name: 'Emanuel',
-            last_name: 'Ezequiel',
+            last_name: '',
             nickname: 'EZE',
             number: 49,
             avatar_color: '#C0C0C0',
@@ -304,16 +304,16 @@ const SEED_DATA = {
     ],
     race_results: {
         'race_9': [
-            { id: 'res_9_1', driver_id: 'drv_demon', kart_number: 17, position: 1, laps: 15, gap: '-', total_time: '8:34.594', best_lap_time: '35.712', is_fastest_lap: 1, points: 9 },
+            { id: 'res_9_1', driver_id: 'drv_meca', kart_number: 17, position: 1, laps: 15, gap: '-', total_time: '8:34.594', best_lap_time: '35.712', is_fastest_lap: 1, points: 9 },
             { id: 'res_9_2', driver_id: 'drv_nahue', kart_number: 7, position: 2, laps: 15, gap: '+8.883', total_time: '8:43.477', best_lap_time: '36.416', is_fastest_lap: 0, points: 7 },
             { id: 'res_9_3', driver_id: 'drv_rama', kart_number: 50, position: 3, laps: 15, gap: '+24.243', total_time: '8:58.837', best_lap_time: '37.375', is_fastest_lap: 0, points: 6 },
-            { id: 'res_9_4', driver_id: 'drv_joel', kart_number: 9, position: 4, laps: 15, gap: '+24.751', total_time: '8:59.345', best_lap_time: '37.300', is_fastest_lap: 0, points: 5 },
-            { id: 'res_9_5', driver_id: 'drv_luquitas', kart_number: 46, position: 5, laps: 14, gap: '1 Vuelta', total_time: '8:47.271', best_lap_time: '38.559', is_fastest_lap: 0, points: 4 },
-            { id: 'res_9_6', driver_id: 'drv_salta', kart_number: 5, position: 6, laps: 14, gap: '1 Vuelta', total_time: '8:47.592', best_lap_time: '39.064', is_fastest_lap: 0, points: 3 },
+            { id: 'res_9_4', driver_id: 'drv_salta', kart_number: 9, position: 4, laps: 15, gap: '+24.751', total_time: '8:59.345', best_lap_time: '37.300', is_fastest_lap: 0, points: 5 },
+            { id: 'res_9_5', driver_id: 'drv_pucho', kart_number: 46, position: 5, laps: 14, gap: '1 Vuelta', total_time: '8:47.271', best_lap_time: '38.559', is_fastest_lap: 0, points: 4 },
+            { id: 'res_9_6', driver_id: 'drv_demon', kart_number: 5, position: 6, laps: 14, gap: '1 Vuelta', total_time: '8:47.592', best_lap_time: '39.064', is_fastest_lap: 0, points: 3 },
             { id: 'res_9_7', driver_id: 'drv_eze', kart_number: 49, position: 7, laps: 14, gap: '1 Vuelta', total_time: '8:49.110', best_lap_time: '39.071', is_fastest_lap: 0, points: 2 },
-            { id: 'res_9_8', driver_id: 'drv_meca', kart_number: 19, position: 8, laps: 14, gap: '1 Vuelta', total_time: '8:58.361', best_lap_time: '39.214', is_fastest_lap: 0, points: 1 },
+            { id: 'res_9_8', driver_id: 'drv_joel', kart_number: 19, position: 8, laps: 14, gap: '1 Vuelta', total_time: '8:58.361', best_lap_time: '39.214', is_fastest_lap: 0, points: 1 },
             { id: 'res_9_9', driver_id: 'drv_fede', kart_number: 15, position: 9, laps: 14, gap: '1 Vuelta', total_time: '8:59.032', best_lap_time: '38.820', is_fastest_lap: 0, points: 0 },
-            { id: 'res_9_10', driver_id: 'drv_pucho', kart_number: 6, position: 10, laps: 14, gap: '1 Vuelta', total_time: '9:05.944', best_lap_time: '38.752', is_fastest_lap: 0, points: 0 }
+            { id: 'res_9_10', driver_id: 'drv_luquitas', kart_number: 6, position: 10, laps: 14, gap: '1 Vuelta', total_time: '9:05.944', best_lap_time: '38.752', is_fastest_lap: 0, points: 0 }
         ]
     }
 };
