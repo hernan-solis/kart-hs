@@ -1,7 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100" fill="none">
-  <rect width="120" height="100" rx="16" fill="#0D111A" stroke="#0090FF" stroke-width="3"/>
-  <!-- Alpine Stylized A -->
-  <path d="M48 24 L24 74 H40 L46 62 H74 L80 74 H96 L72 24 H48 Z M51 52 L60 35 L69 52 H51 Z" fill="#0090FF"/>
-  <!-- Pink Arrow Stroke -->
-  <path d="M36 68 L60 48 L84 68" stroke="#FD4BC7" stroke-width="4" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 70" fill="none">
+  <!-- Alpine Stylized Arrow A -->
+  <g transform="translate(42, 2)">
+    <path d="M42 4 L14 42 H24 L29 34 H55 L52 26 H34 L43 14 L58 35 H68 L46 4 Z" fill="#0090FF"/>
+    <path d="M22 28 L38 28 L43 20 L28 20 Z" fill="#0090FF"/>
+    <!-- Crossbar arrow effect -->
+    <path d="M8 38 L68 38 L62 34 L14 34 Z" fill="#0090FF"/>
+  </g>
+  <!-- Alpine Typography -->
+  <text x="80" y="60" fill="#FFFFFF" font-family="'Titillium Web', -apple-system, sans-serif" font-weight="800" font-size="14" text-anchor="middle" letter-spacing="4">ALPINE</text>
 </svg>
