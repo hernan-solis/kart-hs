@@ -1,4 +1,4 @@
-# 🏁 KartHAS - WebApp de Campeonatos de Karting con Estética F1
+# 🏁 Kart-HS - WebApp de Campeonatos de Karting con Estética F1
 
 Aplicación web integral, rápida y responsive (diseñada especialmente para celulares y PCs) para el seguimiento y gestión de campeonatos internos de karting, inspirada al 100% en la emoción y gráfica de la **Fórmula 1**.
 
@@ -69,7 +69,7 @@ La WebApp utiliza una **arquitectura híbrida inteligente**:
 Podés abrir `index.html` directamente en tu navegador, o iniciar un servidor web local con Python:
 
 ```bash
-cd /Users/hernanabelsolis/.gemini/antigravity/scratch/karthas
+cd /Users/hernanabelsolis/.gemini/antigravity/scratch/kart-hs
 python3 -m http.server 8080
 ```
 Y abrir en tu navegador: `http://localhost:8080`
@@ -78,7 +78,7 @@ Y abrir en tu navegador: `http://localhost:8080`
 
 ## 📤 Subir a tu Repositorio en GitHub
 
-Para subir el proyecto a tu cuenta de GitHub (`https://github.com/hernan-solis/karthas.git`):
+Para subir el proyecto a tu cuenta de GitHub (`https://github.com/hernan-solis/kart-hs.git`):
 1. Hacé doble clic en el archivo ejecutable:
    `subir_a_github.command`
 2. O ejecutalo desde la terminal:
