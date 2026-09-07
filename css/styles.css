@@ -758,3 +758,125 @@
   color: var(--f1-red);
   margin-bottom: 6px;
 }
+
+/* ==============================================================================
+   Ajustes Específicos para Modo Claro (Light Mode)
+   ============================================================================== */
+[data-theme="light"] .main-header {
+  background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+  border-color: #cbd5e1;
+}
+
+[data-theme="light"] .brand-title {
+  color: #0f172a;
+}
+
+[data-theme="light"] .brand-subtitle {
+  color: #64748b;
+}
+
+[data-theme="light"] .desktop-nav {
+  background: #ffffff;
+  border-color: #cbd5e1;
+}
+
+[data-theme="light"] .nav-tab-btn {
+  color: #475569;
+}
+
+[data-theme="light"] .nav-tab-btn:hover {
+  color: #0f172a;
+  background: #f1f5f9;
+}
+
+[data-theme="light"] .mobile-bottom-nav {
+  background: rgba(255, 255, 255, 0.96);
+  border-top-color: #cbd5e1;
+}
+
+[data-theme="light"] .racing-card {
+  background: #ffffff;
+  border-color: #e2e8f0;
+}
+
+[data-theme="light"] .card-header {
+  border-bottom-color: #e2e8f0;
+}
+
+[data-theme="light"] .podium-card {
+  background: #ffffff;
+  border-color: #e2e8f0;
+}
+
+[data-theme="light"] .podium-1 {
+  background: linear-gradient(180deg, rgba(255, 215, 0, 0.16) 0%, #ffffff 100%);
+  border-color: var(--podium-gold);
+}
+
+[data-theme="light"] .podium-2 {
+  background: linear-gradient(180deg, rgba(226, 232, 240, 0.5) 0%, #ffffff 100%);
+  border-color: #94a3b8;
+}
+
+[data-theme="light"] .podium-3 {
+  background: linear-gradient(180deg, rgba(205, 127, 50, 0.16) 0%, #ffffff 100%);
+  border-color: var(--podium-bronze);
+}
+
+[data-theme="light"] .podium-team-name {
+  color: #0f172a;
+}
+
+[data-theme="light"] .f1-table th {
+  background: #f8fafc;
+  color: #475569;
+  border-bottom-color: #cbd5e1;
+}
+
+[data-theme="light"] .f1-table td {
+  border-bottom-color: #f1f5f9;
+}
+
+[data-theme="light"] .f1-table tr:hover td {
+  background: #f8fafc;
+}
+
+[data-theme="light"] .driver-nickname {
+  color: #0f172a;
+}
+
+[data-theme="light"] .drivers-pair-text .driver-1 {
+  color: #0f172a;
+}
+
+[data-theme="light"] .points-pill {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .scanner-dropzone {
+  background: rgba(241, 245, 249, 0.6);
+  border-color: #cbd5e1;
+}
+
+[data-theme="light"] .modal-card {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  color: #0f172a;
+}
+
+[data-theme="light"] .form-input,
+[data-theme="light"] .form-select {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  color: #0f172a;
+}
+
+[data-theme="light"] .form-input:focus,
+[data-theme="light"] .form-select:focus {
+  border-color: var(--f1-red);
+}
+
+[data-theme="light"] .racing-footer {
+  border-top-color: #e2e8f0;
+}
+

@@ -8,13 +8,40 @@ const App = {
     teams: [],
     drivers: [],
     races: [],
+    theme: 'dark',
 
     async init() {
+        this.initTheme();
         await DB.init();
         Auth.init();
         await this.loadData();
         this.setupEventListeners();
         this.renderAll();
+    },
+
+    initTheme() {
+        const savedTheme = localStorage.getItem('kart_hs_theme') || 'dark';
+        this.setTheme(savedTheme);
+
+        const themeBtn = document.getElementById('themeToggleBtn');
+        if (themeBtn) {
+            themeBtn.addEventListener('click', () => {
+                const nextTheme = this.theme === 'dark' ? 'light' : 'dark';
+                this.setTheme(nextTheme);
+                this.showToast(nextTheme === 'light' ? 'Modo Claro activado ☀️' : 'Modo Oscuro activado 🌙', 'info');
+            });
+        }
+    },
+
+    setTheme(theme) {
+        this.theme = theme;
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('kart_hs_theme', theme);
+
+        const iconEl = document.getElementById('themeIcon');
+        if (iconEl) {
+            iconEl.textContent = theme === 'dark' ? '🌙' : '☀️';
+        }
     },
 
     async loadData() {
